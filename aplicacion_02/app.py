@@ -1,15 +1,14 @@
+"""framework web.py"""
 import web
-
+# rutasde los contraladores
 urls = (
-    '/(.*)', 'hello'
+    '/', 'mvc.controllers.hello.Hello'
+    ,"/pagina2","mvc.controllers.hello.Pagina2."    
 )
 app = web.application(urls, globals())
 
-class hello:
-    def GET(self, name):
-        if not name:
-            name = 'World'
-        return 'Hello, ' + name + '!'
 
+    
+# punto de entrada 
 if __name__ == "__main__":
     app.run()
