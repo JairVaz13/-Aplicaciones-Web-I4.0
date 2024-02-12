@@ -1,14 +1,13 @@
-"""framework web.py"""
 import web
-# rutasde los contraladores
+
 urls = (
-    '/', 'mvc.controllers.hello.Hello'
-    ,"/pagina2","mvc.controllers.hello.Pagina2."    
+    '/', 'mvc.controllers.hello.Index', 
+    '/productos', 'mvc.controllers.hello.Productos',
+    '/contactos', 'mvc.controllers.hello.Contactos'
 )
 app = web.application(urls, globals())
 
 
-    
-# punto de entrada 
-if __name__ == "__main__":
+if _name_ == "_main_":
+    web.config.debug= False
     app.run()
