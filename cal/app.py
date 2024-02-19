@@ -1,10 +1,15 @@
+"""Framewerk web.py"""
 import web
 
+#  Rutas de los controladores
 urls = (
-    '/', 'mvc.controllers.index.Index'
+    '/', 'mvc.controllers.calculadora.Calculadora'
 )
+
 app = web.application(urls, globals())
 
+#  Punto de entrada
 if __name__ == "__main__":
-    web.config.debug = True
+    web.config.debug = False
     app.run()
+    
