@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Existencia</th>
+                <th>Caducidad</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>
+                    <a href="#">Detalles</a>
+                    <a href="#">Insertar</a>
+                    <a href="{{ url_for('borrar_producto', id=producto[0]) }}">Borrar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+</body>
+</html>
